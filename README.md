@@ -21,7 +21,7 @@ $ conda build conda/
 $ conda install /PATH/TO/VTK/PACKAGE.tar.gz
 ```
 
-If you wish to edit any settings, please edit the `build.sh` or `bld.bat` files in order to enable `(1)` or disable `(0)` the required settings. Note that in the case where you wish to achieve something like linking an external BLAS library, this may be complicated. In this event, I am unable to provide any assistance. The primary reason for providing this package was to attempt to avoid this kind of hassle in the first place!
+If you wish to edit any settings, please edit the `build.sh` or `bld.bat` files in order to enable `(1)` or disable `(0)` the required settings. Note that in the case where you wish to achieve something like linking an external library, this may be complicated. In this event, I am unable to provide any assistance. The primary reason for providing this package was to attempt to avoid this kind of hassle in the first place!
 
 Known Issues
 ------------
