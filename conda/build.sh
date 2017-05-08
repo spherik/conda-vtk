@@ -34,4 +34,4 @@ cmake -LAH .. \
 -DVTK_WRAP_PYTHON=1 \
 -DVTK_INSTALL_PYTHON_MODULE_DIR=$SP_DIR
 
-make -j$CPU_COUNT && make install
+make -j2 && make install
