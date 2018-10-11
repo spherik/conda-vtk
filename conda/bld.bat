@@ -1,5 +1,8 @@
 @echo off
 setlocal EnableDelayedExpansion
+git clone https://github.com/ValveSoftware/openvr.git
+set OPENVR_INCLUDE_DIR=./openvr/include
+set OPENVR_LIBRARY_TEMP=./openvr/lib/osx32/libopenvr_api.dylib
 
 mkdir build
 cd build
@@ -31,7 +34,10 @@ cmake -LAH .. -G"%GENERATOR%" ^
 -DBUILD_SHARED_LIBS=1 ^
 -DPYTHON_EXECUTABLE=%PYTHON% ^
 -DVTK_WRAP_PYTHON=1 ^
--DVTK_INSTALL_PYTHON_MODULE_DIR=%SP_DIR%
+-DVTK_INSTALL_PYTHON_MODULE_DIR=%SP_DIR% ^
+-DModule_VTKRenderingOpenVR=1  ^
+-DOPENVR_INCLUDE_DIR=%OPENVR_INCLUDE_DIR% ^
+-DOPENVR_LIBRARY_TEMP=%OPENVR_LIBRARY_TEMP%
 
 cmake --build . --config Release --target ALL_BUILD
 cmake --build . --config Release --target INSTALL
