@@ -13,7 +13,7 @@ if "%PY_VER%" == "3.4" (
     if "%PY_VER%" == "3.5" (
         set GENERATOR=Visual Studio 14 2015
     ) else (
-        set GENERATOR=Visual Studio 9 2008
+        set GENERATOR=Visual Studio 15 2017 Win64
     )
 )
 
